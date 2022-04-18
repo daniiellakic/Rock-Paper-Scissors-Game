@@ -27,34 +27,32 @@ body{
 }
 
 h2{
-  padding: 10px;
-  font-size: 80pt;
-  font-family: 'Luckiest Guy';
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow:   0px -6px 0 rgb(3, 4, 12),  
-                 0px -6px 0 rgb(3, 4, 12),
-                 0px  6px 0 rgb(3, 4, 12),
-                 0px  6px 0 rgb(3, 4, 12),
-                -6px  0px 0 rgb(5, 29, 241),  
-                 6px  0px 0 rgb(3, 4, 12),
-                -6px  0px 0 rgb(3, 4, 12),
-                 6px  0px 0 rgb(3, 4, 12),
-                -6px -6px 0 rgb(3, 4, 12),
-                 6px -6px 0 rgb(5, 29, 241),
-                -6px  6px 0 rgb(5, 29, 241),
-                 6px  6px 0 rgb(5, 29, 241),
-                -6px  18px 0 rgb(5, 29, 241),
-                 0px  18px 0 rgb(5, 29, 241),
-                 6px  18px 0 rgb(5, 29, 241),
-                 0 19px 1px rgba(0,0,0,.1),
-                 0 0 6px rgba(0,0,0,.1),
-                 0 6px 3px rgba(0,0,0,.3),
-                 0 12px 6px rgba(0,0,0,.2),
-                 0 18px 18px rgba(0,0,0,.25),
-                 0 24px 24px rgba(0,0,0,.2),
-                 0 36px 36px rgba(0,0,0,.15);
+  margin-bottom: 1.5em;
+  position: relative;
+  font-size: 5em;
+  letter-spacing: 15px;
+  color:rgb(9, 23, 131); 
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect:below 1px linear-gardient(transparent, #0004 );
+  line-height: 0.70em;
+  outline:none;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80.1%, 90.1%, 92%{
+        color: rgb(9, 23, 131);
+        box-shadow: none;
+    }
+    100%{
+        color: #fff;
+        text-shadow: 0 0 10px #3975c4,
+        0 0 20px #3975c4,
+        0 0 40px  #3975c4,
+        0 0 80px  #3975c4,
+        0 0 160px  #3975c4;
+    }
 }
 
 .reload-btn{
@@ -75,4 +73,22 @@ h2{
     position:absolute;
     bottom:0;
     height:60px;
+}
+
+@media screen and (max-width:768px){
+    .container h2{
+        margin: -80px;
+        margin-bottom: 40px;
+        padding-top: 1em;
+        width:100%;
+      
+    }
+    h2{
+        line-height: 1em;
+        font-size: 3.5em;
+    }
+    .footer{
+        top: 60em;
+        height:10px;
+    }
 }
